@@ -1,0 +1,279 @@
+{
+    "id": 1,
+    "machineName": "自行剪叉车",
+    "machineType": "SPS1012HA",
+    "maxPlatHeight": "10m",
+    "maxHorizontalExt": "0.9m",
+    "ratedLoad": "350kg/350kg",
+    "machineWeight": "3000kg",
+    "customData": [
+        {
+            "key": "c1",
+            "name": "最大平台高度",
+            "value": "10m",
+            "order": 1,
+            "show": true
+        },
+        {
+            "key": "c2",
+            "name": "最大工作高度",
+            "value": "12m",
+            "order": 2,
+            "show": true
+        },
+        {
+            "key": "c3",
+            "name": "最大水平延伸",
+            "value": "0.9m",
+            "order": 3,
+            "show": false
+        },
+        {
+            "key": "c4",
+            "name": "整机长度（带梯子/不带梯子）",
+            "value": "2.48m/2.27m",
+            "order": 4,
+            "show": false
+        },
+        {
+            "key": "c5",
+            "name": "整机宽度",
+            "value": "1.21m",
+            "order": 5,
+            "show": false
+        },
+        {
+            "key": "c6",
+            "name": "整机高度（收车状态、护栏折叠）",
+            "value": "1.83m",
+            "order": 6,
+            "show": false
+        },
+        {
+            "key": "c7",
+            "name": "整机高度（收车状态、护栏未折叠）",
+            "value": "2.51m",
+            "order": 7,
+            "show": false
+        },
+        {
+            "key": "c8",
+            "name": "轴距",
+            "value": "1.87m",
+            "order": 8,
+            "show": false
+        },
+        {
+            "key": "c9",
+            "name": "轮距",
+            "value": "1.09m",
+            "order": 9,
+            "show": false
+        },
+        {
+            "key": "c10",
+            "name": "离地间隙（坑洞保护装置收起）",
+            "value": "0.11m",
+            "order": 10,
+            "show": false
+        },
+        {
+            "key": "c11",
+            "name": "离地间隙（坑洞保护装置展开）",
+            "value": "0.019m",
+            "order": 11,
+            "show": false
+        },
+        {
+            "key": "c12",
+            "name": "轮胎尺寸（直径×宽度）",
+            "value": "Φ381×127mm",
+            "order": 12,
+            "show": false
+        },
+        {
+            "key": "c13",
+            "name": "平台尺寸（长度×宽度）",
+            "value": "2.27m×1.12m",
+            "order": 13,
+            "show": false
+        },
+        {
+            "key": "c14",
+            "name": "平台额定承载能力（室内/室外）",
+            "value": "350kg/350kg",
+            "order": 14,
+            "show": false
+        },
+        {
+            "key": "c15",
+            "name": "延伸平台最大承载能力（室内/室外）",
+            "value": "120kg/120kg",
+            "order": 15,
+            "show": false
+        },
+        {
+            "key": "c16",
+            "name": "平台最大承载人数（室内/室外）",
+            "value": "2人/1人",
+            "order": 16,
+            "show": false
+        },
+        {
+            "key": "c17",
+            "name": "延伸平台最大承载人数（室内/室外）",
+            "value": "1人/1人",
+            "order": 17,
+            "show": false
+        },
+        {
+            "key": "c18",
+            "name": "行驶速度（收车状态）",
+            "value": "0~3.5km/h",
+            "order": 18,
+            "show": false
+        },
+        {
+            "key": "c19",
+            "name": "行驶速度（举升状态）",
+            "value": "0~0.8km/h",
+            "order": 19,
+            "show": false
+        },
+        {
+            "key": "c20",
+            "name": "平台全升时间（无载重）",
+            "value": "55±5s",
+            "order": 20,
+            "show": false
+        },
+        {
+            "key": "c21",
+            "name": "平台全降时间（无载重）",
+            "value": "42±5s",
+            "order": 21,
+            "show": false
+        },
+        {
+            "key": "c22",
+            "name": "爬坡能力",
+            "value": "25%",
+            "order": 22,
+            "show": false
+        },
+        {
+            "key": "c23",
+            "name": "最大允许倾斜角",
+            "value": "左右1.5°/前后3°",
+            "order": 23,
+            "show": false
+        },
+        {
+            "key": "c24",
+            "name": "转弯半径（内轮）",
+            "value": "0.4m",
+            "order": 24,
+            "show": false
+        },
+        {
+            "key": "c25",
+            "name": "转弯半径（外轮）",
+            "value": "2.4m",
+            "order": 25,
+            "show": false
+        },
+        {
+            "key": "c26",
+            "name": "单个轮胎额定承载能力",
+            "value": "1310kg",
+            "order": 26,
+            "show": false
+        },
+        {
+            "key": "c27",
+            "name": "最大允许倾斜力（室内/室外）",
+            "value": "400N/200N",
+            "order": 27,
+            "show": false
+        },
+        {
+            "key": "c28",
+            "name": "液压油箱容积",
+            "value": "20L",
+            "order": 28,
+            "show": false
+        },
+        {
+            "key": "c29",
+            "name": "液压系统压力",
+            "value": "24MPa",
+            "order": 29,
+            "show": false
+        },
+        {
+            "key": "c30",
+            "name": "电池规格（数量×电压，容量）",
+            "value": "4×6V/260Ah",
+            "order": 30,
+            "show": false
+        },
+        {
+            "key": "c31",
+            "name": "系统电压",
+            "value": "24V",
+            "order": 31,
+            "show": false
+        },
+        {
+            "key": "c32",
+            "name": "控制电压",
+            "value": "24V",
+            "order": 32,
+            "show": false
+        },
+        {
+            "key": "c33",
+            "name": "最大允许风速（室内/室外）",
+            "value": "0/12.5m/s",
+            "order": 33,
+            "show": false
+        },
+        {
+            "key": "c34",
+            "name": "最大允许海拔高度",
+            "value": "1000m",
+            "order": 34,
+            "show": false
+        },
+        {
+            "key": "c35",
+            "name": "允许使用环境温度（酸铅电池）",
+            "value": "-10℃~40℃",
+            "order": 35,
+            "show": false
+        },
+        {
+            "key": "c36",
+            "name": "允许使用环境温度（锂电池）",
+            "value": "-20℃~40℃",
+            "order": 37,
+            "show": false
+        },
+        {
+            "key": "c37",
+            "name": "存储环境",
+            "value": "存放于通风良好的环境中，远离雨水、阳光、腐蚀性气体和易燃易爆物品。",
+            "order": 37,
+            "show": false
+        },
+        {
+            "key": "c38",
+            "name": "整机重量（无载重）",
+            "value": "3000kg",
+            "order": 38,
+            "show": false
+        }
+    ],
+    "totalWorktime": "0.68",
+    "machineStatus": "1"
+}

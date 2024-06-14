@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" href="/favicon.ico" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>微信跳转</title>
+</head>
+
+<body>
+  <div id="app"></div>
+  <script>
+    // 扫描后访问 http://localhost/contact/main?sn=SPS10CC00338
+    // 扫描后访问 http://awp.sany.com.cn/contact/main?sn=SPS10CC00338
+
+    // 当前访问的基础路径
+    const BASE_PATH = getCurrentBasePath()
+    // const BASE_PATH = 'https://awp.sany.com.cn/'
+    // sn参数的值
+    const SN = getParameterByName('sn')? getParameterByName('sn') : ''
+    // document.querySelector('#app').innerText = sn
+
+    // 拼接成要访问的真正的路径
+    const REDIRECT_URI = `${BASE_PATH}?sn=${SN}`
+    // 路径进行encode编码
+    const REDIRECT_URI_ENCODE = encodeURIComponent(REDIRECT_URI)
+    // const REDIRECT_URI_ENCODE = encodeURIComponent('https://awp.sany.com.cn/h5/subscribe/list')
+    // 微信公众号中的APPID
+    const APPID = 'wxdd388404a696dc48'
+    // 授权模式-静默授权，只获取openId
+    const SCOPE = 'snsapi_base'
+    // 拼接要访问的微信授权地址
+    const WEIXIN_URL = `https://open.weixin.qq.com/connect/oauth2/authorize?appid=${APPID}&redirect_uri=${REDIRECT_URI_ENCODE}&response_type=code&scope=${SCOPE}#wechat_redirect`
+
+
+    // 最终微信会帮我们回调类似于下面的地址，同时拼接上code参数
+    // const url = 'https://awp.sany.com.cn/?sn=SPS10CC00338&code=061P4v0w3e2GIY29m92w3mN3b61P4v0A'
+
+
+    // console.log(WEIXIN_URL);
+    // console.log(encodeURIComponent(REDIRECT_URI));
+
+    is_weixin()
+
+    // 判断是否是微信内置浏览器
+    function is_weixin(){
+      var ua = navigator.userAgent.toLowerCase();
+      if(ua.match(/MicroMessenger/i) == "micromessenger") {
+        window.location.href = WEIXIN_URL
+      } else {
+        window.location.href = REDIRECT_URI
+      }
+    }
+
+    // 获取指定参数
+    function getParameterByName(name, url = window.location.href) {
+      name = name.replace(/[\[\]]/g, '\\$&');
+      var regex = new RegExp('[?&]' + name + '(=([^&#]*)|&|#|$)'),
+        results = regex.exec(url);
+      if (!results) return null;
+      if (!results[2]) return '';
+      return decodeURIComponent(results[2].replace(/\+/g, ' '));
+    }
+
+    // 参数windowLocationSearch的形式如下：
+    // ?sn=SPS10CC00338&code=061P4v0w3e2GIY29m92w3mN3b61P4v0A&state=123'
+    function getSearchParam(windowLocationSearch){
+      // 创建一个URLSearchParams实例
+      const urlSearchParams = new URLSearchParams(windowLocationSearch);
+      // 把键值对列表转换为一个对象
+      const params = Object.fromEntries(urlSearchParams.entries());
+      
+      return params;
+    }
+
+    // 获取当前访问的基础路径
+    function getCurrentBasePath(){
+      const protocol = window.location.protocol
+      const host = window.location.host
+      const basePath = protocol+"//"+host+"/"
+
+      // const port = window.location.port
+      // let basePath
+      // if(port){
+      //   basePath = protocol+"//"+host+":"+port+"/"
+      // }else{
+      //   basePath = protocol+"//"+host+"/"
+      // }
+      // console.log(basePath);
+      return basePath
+    }
+
+    // console.log(getSearchParam(window.location.search).sn);
+
+
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,26 @@
+@import './mixins/_index.scss';
+@import './iconfont/_index.scss';
+
+.hairline-b{
+  @include hairline-bottom();
+}
+
+.text-justify{
+  text-align: justify;
+}
+// 修改vant中的Notify组件在微信浏览器中的bug
+.van-popup{
+  &.van-notify--primary {
+    background: var(--van-notify-primary-background-color);
+  }
+  &.van-notify--success {
+    background: var(--van-notify-success-background-color);
+  }
+  &.van-notify--danger {
+    background: var(--van-notify-danger-background-color);
+  }
+  &.van-notify--warning {
+    background: var(--van-notify-warning-background-color);
+  }
+}
+
